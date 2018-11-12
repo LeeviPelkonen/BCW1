@@ -1,0 +1,50 @@
+<!doctype html>
+<html class="no-js" lang="">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Task A</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="apple-touch-icon" href="apple-touch-icon.png">
+
+    <link rel="stylesheet" href="css/normalize.min.css">
+    <link rel="stylesheet" href="css/main.css">
+
+    <script src="js/vendor/modernizr-2.8.3.min.js"></script>
+</head>
+
+<body>
+    <h1>Form validation HTML5</h1>
+
+    <form>
+        <!-- your input elements here -->
+        <p id = 'fnam'>Firstname
+                <input type='text' name='fname' required>
+        </p>
+        <p id = 'lnam'>Lastname
+                <input type='text' name='lname' required>
+        </p>
+        <p id = 'mail'>Email
+                <input type='email' name='email' required>
+        </p>
+        <p id = 'phone'>Phone number
+                <input type='tel' name='phone' pattern="(+358)[0-9]{9}">
+        </p>
+        <p id = 'address'>Address
+                <input type='text'>
+        </p>
+        <p id = 'postal'>Postal code
+                <input type='number' pattern="[0-9]{5}" min="0" max="99999">
+        </p>
+        <p id = 'pass'>Password
+                <input type='password'>
+        </p>
+        <button onclick>Update</button>
+    </form>
+
+    <script src="js/main.js"></script>
+</body>
+
+</html>
