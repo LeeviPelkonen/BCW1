@@ -30,7 +30,7 @@
                 <input type='email' name='email' required>
         </p>
         <p id = 'phone'>Phone number
-                <input type='tel' name='phone' pattern="(+358)[0-9]{9}">
+                <input type='tel' name='phone' pattern=^\+[0-9]{5,}$">
         </p>
         <p id = 'address'>Address
                 <input type='text'>
@@ -41,13 +41,8 @@
         <p id = 'pass'>Password
                 <input type='password'>
         </p>
-        <button onclick='update()'>Update</button>
+        <button onclick>Update</button>
     </form>
-    <script>
-        function update(){
-                const element = document.querySelector('p').style.backgroundColor = 'red';
-            }
-        </script>
     <script src="js/main.js"></script>
 </body>
 </html>
