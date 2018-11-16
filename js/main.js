@@ -1,6 +1,6 @@
 'use strict';
 
-var check = 0;
+let check = 0;
 const input = document.querySelectorAll('input');
 const form = document.querySelector('form');
 
@@ -25,9 +25,9 @@ const isEmpty = (element) => {
 
 const pattern = (element) => {
   const pat = new RegExp(element.getAttribute('pattern'), 'i');
-  const values = element.value;
-  
-  if (!pat.test(values)){
+  const value = element.value;
+
+  if (!pat.test(value)){
     element.setAttribute('style', 'border: yellow solid 1px');
     check--;
 
@@ -40,10 +40,11 @@ const pattern = (element) => {
 form.addEventListener('submit', (evt) => {
   evt.preventDefault();
   check = 0;
-  checkAttribute(input, 'required', checkEmpty);
-  checkAttribute(input, 'pattern', checkPattern);
+  attribute(input, 'required', isEmpty);
+  attribute(input, 'pattern', pattern);
   console.log(check);
 
-  if (check === 8)
+  if (check === 8) {
     form.submit();
+  }
 });
